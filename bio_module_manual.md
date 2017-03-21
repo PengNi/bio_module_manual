@@ -27,16 +27,16 @@
 1. __网络数据的表现形式__
 
     (1). __matrix__
+ 
+     ![network_matrix1](./network_matrix.png)
 
-       > ![network_matrix1](./network_matrix.png)
-
-       > ![network_matrix2](./network_matrix2.png)
+     ![network_matrix2](./network_matrix2.png)
     
     (2). __triplet__
 
-       > ![network_triplet1](./network_triplet.png)
+     ![network_triplet1](./network_triplet.png)
         
-       > ![network_triplet2](./network_triplet2.png)
+     ![network_triplet2](./network_triplet2.png)
 
 2. __其它__
 
@@ -527,19 +527,19 @@ end
   > 2.  描述：NBI推荐值计算，该方法用来计算推荐值矩阵，通过二分图中两部资源传递的方法来计算推荐值矩阵。通过二分图的一个顶点集合中的任意两个顶点的共邻信息来预测二分图中的未知的边。假设二分图中的两组顶点集合为A和B。
   > 3.  输入：A和B已知关联关系。
   > 4.  输出：A和B的推荐值矩阵。
-  > 5.  模块： 
-  > a1：二分图邻接矩阵创建模块（15-33-10-001）
-  > &nbsp;&nbsp;输入：A和B的二分图关联关系列表文件
-  > &nbsp;&nbsp;输出：A和B的二分图邻接矩阵
-  > b1：二分图顶点度计算模块（15-33-10-002）
-  > &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1）
-  > &nbsp;&nbsp;输出：二分图邻接矩阵的行顶点度的向量
-  > b2：二分图顶点度计算模块（15-33-10-002）
-  > &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1）
-  > &nbsp;&nbsp;输出：二分图邻接矩阵的列顶点度的向量
-  > c1：NBI推荐值计算模块（15-33-11-001）
-  > &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1），二分图邻接矩阵的列顶点度的向量（来自b2），二分图邻接矩阵的行顶点度的向量（来自b1）
-  > &nbsp;&nbsp;输出：A和B的推荐值矩阵
+  > 5.  模块： <br/>
+  > a1：二分图邻接矩阵创建模块（15-33-10-001）<br/>
+  > &nbsp;&nbsp;输入：A和B的二分图关联关系列表文件<br/>
+  > &nbsp;&nbsp;输出：A和B的二分图邻接矩阵<br/>
+  > b1：二分图顶点度计算模块（15-33-10-002）<br/>
+  > &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1）<br/>
+  > &nbsp;&nbsp;输出：二分图邻接矩阵的行顶点度的向量<br/>
+  > b2：二分图顶点度计算模块（15-33-10-002）<br/>
+  > &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1）<br/>
+  > &nbsp;&nbsp;输出：二分图邻接矩阵的列顶点度的向量 <br/>
+  > c1：NBI推荐值计算模块（15-33-11-001）<br/>
+  > &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1），二分图邻接矩阵的列顶点度的向量（来自b2），二分图邻接矩阵的行顶点度的向量（来自b1）→→
+  > &nbsp;&nbsp;输出：A和B的推荐值矩阵<br/>
   > 6.  测试和评价
   > 测试数据为mtis_list.txt, 评价方式为10-fold cross validation。
   > 7.  参考文献/来源：Zhou,T. et al. (2007) Bipartite network projection and personal recommendation. Phys. Rev. E Stat. Nonlin. Soft Matter Phys., 76, 046115.
