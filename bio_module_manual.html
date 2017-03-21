@@ -1057,13 +1057,15 @@ body .markdown-body
 <li>
 <p><strong>网络数据的表现形式</strong></p>
 <p>(1). <strong>matrix</strong></p>
+<blockquote>
 <p><img alt="network_matrix1" src="///D://bioinformatics/tools/module_system/biomanual/network_matrix.png" /></p>
-<p>&nbsp;</p>
 <p><img alt="network_matrix2" src="///D://bioinformatics/tools/module_system/biomanual/network_matrix2.png" /></p>
+</blockquote>
 <p>(2). <strong>triplet</strong></p>
+<blockquote>
 <p><img alt="network_triplet1" src="///D://bioinformatics/tools/module_system/biomanual/network_triplet.png" /></p>
-<p>&nbsp;</p>
 <p><img alt="network_triplet2" src="///D://bioinformatics/tools/module_system/biomanual/network_triplet2.png" /></p>
+</blockquote>
 </li>
 <li>
 <p><strong>其它</strong></p>
@@ -1115,12 +1117,12 @@ body .markdown-body
 <p>Java</p>
 <p>要求：</p>
 <blockquote>
-<p>a. 每个模块只包含一个文件，文件类型必须是.java文件且文件名与文件所包含类名必须保持一致；<br />
-b. 模块中需包含execute方法（类似于main方法）；<br />
-c. execute() 上下文输入对象类型是InputStream；<br />
-d. execute() 的属性参数都是字符串类型，如需转换请在模块内转换成其它类型（如int）；<br />
-e. 上下文输入对象如果是triplet型文件，需加属性参数标明要读的某几列的列数；<br />
-f. execute() 输出对象类型是 Map<String, String> 类型，例子：&lt;’output1’, ‘this is a string’&gt;；</p>
+<p>a. 每个模块只包含一个文件，文件类型必须是.java文件且文件名与文件所包含类名必须保持一致；</p>
+<p>b. 模块中需包含execute方法（类似于main方法）；</p>
+<p>c. execute() 上下文输入对象类型是InputStream；</p>
+<p>d. execute() 的属性参数都是字符串类型，如需转换请在模块内转换成其它类型（如int）；</p>
+<p>e. 上下文输入对象如果是triplet型文件，需加属性参数标明要读的某几列的列数；</p>
+<p>f. execute() 输出对象类型是 Map<String, String> 类型，例子：&lt;’output1’, ‘this is a string’&gt;；</p>
 </blockquote>
 <p>demo：<br />
 <pre><code class="java">
@@ -1411,11 +1413,11 @@ public class MNC {
 <p>Python</p>
 <p>要求：</p>
 <blockquote>
-<p>a. 每个模块只包含一个文件，而且文件类型必须是.py文件，建议用python3.x语法;<br />
-b. 需注意属性参数都是字符串类型；<br />
-c. 上下文输入对象如果是triplet型文件，需加属性参数标明要读的某几列的列数；<br />
-d. 每个模块都有一个/多个输出参数，指明结果写入文件的地址；<br />
-e. 结果存成dict类型，转成json格式之后，写入文件；</p>
+<p>a. 每个模块只包含一个文件，而且文件类型必须是.py文件，建议用python3.x语法;</p>
+<p>b. 需注意属性参数都是字符串类型；</p>
+<p>c. 上下文输入对象如果是triplet型文件，需加属性参数标明要读的某几列的列数；</p>
+<p>d. 每个模块都有一个/多个输出参数，指明结果写入文件的地址；</p>
+<p>e. 结果存成dict类型，转成json格式之后，写入文件；</p>
 </blockquote>
 <p>demo:<br />
 <pre><code class="python">import json
@@ -1455,11 +1457,11 @@ if __name__ == &quot;__main__&quot;:
 <p>Matlab</p>
 <p>要求：</p>
 <blockquote>
-<p>a. 每个模块只包含一个文件，而且文件类型必须是.m文件;<br />
-b. 需注意属性参数都是字符串类型；<br />
-c. 每个模块都有一个/多个输出参数，指明结果写入文件的地址；<br />
-d. 结果存入文件；<br />
-e. 输出文件地址保存在dict类型中，用disp()打印出来；</p>
+<p>a. 每个模块只包含一个文件，而且文件类型必须是.m文件;</p>
+<p>b. 需注意属性参数都是字符串类型；</p>
+<p>c. 每个模块都有一个/多个输出参数，指明结果写入文件的地址；</p>
+<p>d. 结果存入文件；</p>
+<p>e. 输出文件地址保存在dict类型中，用disp()打印出来；</p>
 </blockquote>
 <p>demo:<br />
 <pre><code class="matlab">function ksim = knn_sim(osim_filename, k, outputfile)
@@ -1550,17 +1552,17 @@ b. </p>
 2.  描述：NBI推荐值计算，该方法用来计算推荐值矩阵，通过二分图中两部资源传递的方法来计算推荐值矩阵。通过二分图的一个顶点集合中的任意两个顶点的共邻信息来预测二分图中的未知的边。假设二分图中的两组顶点集合为A和B。<br />
 3.  输入：A和B已知关联关系。<br />
 4.  输出：A和B的推荐值矩阵。<br />
-5.  模块：<br />
-a1：二分图邻接矩阵创建模块（15-33-10-001）<br />
+5.  模块：</p>
+<p>a1：二分图邻接矩阵创建模块（15-33-10-001）<br />
 &nbsp;&nbsp;输入：A和B的二分图关联关系列表文件<br />
-&nbsp;&nbsp;输出：A和B的二分图邻接矩阵<br />
-b1：二分图顶点度计算模块（15-33-10-002）<br />
+&nbsp;&nbsp;输出：A和B的二分图邻接矩阵</p>
+<p>b1：二分图顶点度计算模块（15-33-10-002）<br />
 &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1）<br />
-&nbsp;&nbsp;输出：二分图邻接矩阵的行顶点度的向量<br />
-b2：二分图顶点度计算模块（15-33-10-002）<br />
+&nbsp;&nbsp;输出：二分图邻接矩阵的行顶点度的向量</p>
+<p>b2：二分图顶点度计算模块（15-33-10-002）<br />
 &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1）<br />
-&nbsp;&nbsp;输出：二分图邻接矩阵的列顶点度的向量<br />
-c1：NBI推荐值计算模块（15-33-11-001）<br />
+&nbsp;&nbsp;输出：二分图邻接矩阵的列顶点度的向量</p>
+<p>c1：NBI推荐值计算模块（15-33-11-001）<br />
 &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1），二分图邻接矩阵的列顶点度的向量（来自b2），二分图邻接矩阵的行顶点度的向量（来自b1）<br />
 &nbsp;&nbsp;输出：A和B的推荐值矩阵<br />
 6.  测试和评价<br />

@@ -28,17 +28,15 @@
 
     (1). __matrix__
 
-       ![network_matrix1](./network_matrix.png)
+       > ![network_matrix1](./network_matrix.png)
 
-       
-       ![network_matrix2](./network_matrix2.png)
+       > ![network_matrix2](./network_matrix2.png)
     
     (2). __triplet__
 
-       ![network_triplet1](./network_triplet.png)
-       
-       
-       ![network_triplet2](./network_triplet2.png)
+       > ![network_triplet1](./network_triplet.png)
+        
+       > ![network_triplet2](./network_triplet2.png)
 
 2. __其它__
 
@@ -530,15 +528,19 @@ end
   > 3.  输入：A和B已知关联关系。
   > 4.  输出：A和B的推荐值矩阵。
   > 5.  模块：
+  > 
   > a1：二分图邻接矩阵创建模块（15-33-10-001）
   > &nbsp;&nbsp;输入：A和B的二分图关联关系列表文件
   > &nbsp;&nbsp;输出：A和B的二分图邻接矩阵
+  > 
   > b1：二分图顶点度计算模块（15-33-10-002）
   > &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1）
   > &nbsp;&nbsp;输出：二分图邻接矩阵的行顶点度的向量
+  > 
   > b2：二分图顶点度计算模块（15-33-10-002）
   > &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1）
   > &nbsp;&nbsp;输出：二分图邻接矩阵的列顶点度的向量
+  > 
   > c1：NBI推荐值计算模块（15-33-11-001）
   > &nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1），二分图邻接矩阵的列顶点度的向量（来自b2），二分图邻接矩阵的行顶点度的向量（来自b1）
   > &nbsp;&nbsp;输出：A和B的推荐值矩阵
