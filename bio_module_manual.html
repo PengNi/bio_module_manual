@@ -1,0 +1,1577 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>bio_module_manual</title></head><body><article class="markdown-body"><h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>生物模块开发相关规范</h1>
+<p>关键词：问题  数据  方法  模块  结果</p>
+<div class="toc">
+<ul>
+<li><a href="#_1">生物模块开发相关规范</a><ul>
+<li><a href="#_2">一. 数据规范</a><ul>
+<li><a href="#i">I. 数据类型</a></li>
+<li><a href="#ii">II. 表现形式</a></li>
+<li><a href="#iii">III. 数据格式规范</a></li>
+<li><a href="#iv">IV. 数据描述规范</a></li>
+</ul>
+</li>
+<li><a href="#_3">二. 模块规范</a><ul>
+<li><a href="#i_1">I. 模块代码规范</a></li>
+<li><a href="#ii_1">II. 模块文档规范</a></li>
+</ul>
+</li>
+<li><a href="#_4">三. 方法文档规范</a></li>
+<li><a href="#_5">四. 问题描述文档规范</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>一. 数据规范</h3>
+<h4 id="i"><a name="user-content-i" href="#i" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>I. 数据类型</h4>
+<ol>
+<li>
+<p><strong>文本</strong><br />
+<strong>网络关系</strong><br />
+    网络分两种：<br />
+    (1). 某一实体自身的网络， 比如蛋白质相互作用网络；</p>
+<p>(2). 两种实体之间的关系网络，比如疾病-基因关系网络。</p>
+<p><strong>其他如序列等</strong></p>
+</li>
+<li>
+<p><strong>图像等</strong></p>
+</li>
+</ol>
+<h4 id="ii"><a name="user-content-ii" href="#ii" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>II. 表现形式</h4>
+<ol>
+<li>
+<p><strong>网络数据的表现形式</strong></p>
+<p>(1). <strong>matrix</strong></p>
+<p><img alt="network_matrix1" src="///D://bioinformatics/tools/%E6%A8%A1%E5%9D%97%E5%B9%B3%E5%8F%B0/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/network_matrix.png" /><br />
+   &nbsp;<br />
+<img alt="network_matrix2" src="///D://bioinformatics/tools/%E6%A8%A1%E5%9D%97%E5%B9%B3%E5%8F%B0/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/network_matrix2.png" /></p>
+<p>(2). <strong>triplet</strong></p>
+<p><img alt="network_triplet1" src="///D://bioinformatics/tools/%E6%A8%A1%E5%9D%97%E5%B9%B3%E5%8F%B0/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/network_triplet.png" /><br />
+   &nbsp;<br />
+<img alt="network_triplet2" src="///D://bioinformatics/tools/%E6%A8%A1%E5%9D%97%E5%B9%B3%E5%8F%B0/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/network_triplet2.png" /></p>
+</li>
+<li>
+<p><strong>其它</strong></p>
+</li>
+</ol>
+<h4 id="iii"><a name="user-content-iii" href="#iii" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>III. 数据格式规范</h4>
+<ol>
+<li>
+<p><strong>分隔符</strong><br />
+    三种分隔符：<strong><em>&rsquo;,&rsquo;        &lsquo; &lsquo;     &lsquo;\t&rsquo;</em></strong>，考虑到数据的内容，逗号、空格作为分隔符都不合适，所以规定：</p>
+<blockquote>
+<p>所有输入输出文件均为文本文件，文本内容用<strong><em>制表符 ( &lsquo;\t&rsquo; )</em></strong> 分隔。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>网络关系数据的表头（行名和列名）</strong></p>
+<p>规范1：</p>
+<blockquote>
+<p>所有triplet型的数据都必须有列名。</p>
+</blockquote>
+<p>规范2：</p>
+<blockquote>
+<p>矩阵的行和列须按行名和列名的字典序来排序；<br />
+矩阵数据原则上要有行名和列名(见示例(1))。</p>
+</blockquote>
+<p>规范3：</p>
+<blockquote>
+<p>包括但不限于matlab语言，行名列名可单独列出，矩阵数据可只包含矩阵元素(见示例(2))。</p>
+</blockquote>
+<p>示例</p>
+<blockquote>
+<p>(1)<br />
+<img alt="network_matrix2" src="///D://bioinformatics/tools/%E6%A8%A1%E5%9D%97%E5%B9%B3%E5%8F%B0/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/network_matrix2.png" /><br />
+(2)<br />
+<img alt="network_matrix31" src="///D://bioinformatics/tools/%E6%A8%A1%E5%9D%97%E5%B9%B3%E5%8F%B0/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/network_matrix3_1.png" />     <img alt="network_matrix32" src="///D://bioinformatics/tools/%E6%A8%A1%E5%9D%97%E5%B9%B3%E5%8F%B0/%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/network_matrix3_2.png" /></p>
+</blockquote>
+</li>
+</ol>
+<h4 id="iv"><a name="user-content-iv" href="#iv" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>IV. 数据描述规范</h4>
+<blockquote>
+<p>数据要有规范化的描述：类型，版本，日期，统计，来源/网址，参考文献等；<br />
+提供的数据要有意义；</p>
+</blockquote>
+<h3 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>二. 模块规范</h3>
+<h4 id="i_1"><a name="user-content-i_1" href="#i_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>I. 模块代码规范</h4>
+<p>所有模块都是可以有多个输出的，因此每个模块的输出都要用dict封装起来。</p>
+<ol>
+<li>
+<p>Java</p>
+<p>要求：</p>
+<blockquote>
+<p>a. 每个模块只包含一个文件，文件类型必须是.java文件且文件名与文件所包含类名必须保持一致；<br />
+b. 模块中需包含execute方法（类似于main方法）；<br />
+c. execute() 上下文输入对象类型是InputStream；<br />
+d. execute() 的属性参数都是字符串类型，如需转换请在模块内转换成其它类型（如int）；<br />
+e. 上下文输入对象如果是triplet型文件，需加属性参数标明要读的某几列的列数；<br />
+f. execute() 输出对象类型是 Map<String, String> 类型，例子：&lt;’output1’, ‘this is a string’&gt;；</p>
+</blockquote>
+<p>demo：<br />
+<pre><code class="java">
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Vector;
+
+public class MNC {
+
+  public List&lt;String[]&gt; net;
+  public List&lt;String&gt; nodes;
+  public int[][] adjMatrix;
+
+  /**
+   * 调用方法并返回计算结果
+   * @param input 输入数据，带列标题的网络数据
+   * @param selectedColumn1 选择一列作为边的一个顶点
+   * @param selectedColumn2 选择一列作为边的另一个顶点
+   * @return
+   */
+  public Map&lt;String, String&gt; execute(InputStream input, String selectedColumn1, 
+      String selectedColumn2){
+
+    net = new ArrayList&lt;&gt;();
+    int column1 = Integer.parseInt(selectedColumn1);
+    int column2 = Integer.parseInt(selectedColumn2);
+    //处理输入数据
+    String networkStr = convertStreamToString(input);
+    String[] networkArr = networkStr.split(&quot;\n&quot;);
+    //第一行标识列标题，舍去
+    for (int i = 1; i &lt; networkArr.length; i++) {
+      String[] edgeStr = networkArr[i].split(&quot;\t&quot;);
+      net.add(new String[]{edgeStr[column1-1],edgeStr[column2-1]});
+    }
+    System.out.println(&quot;net size:&quot;+net.size());
+    //获取网络中的所有节点
+    nodes = getAllNodes();
+    //构建邻接矩阵
+    adjMatrix = getAdjMatrix();
+
+    //得到计算结果并对结果排序
+    HashMap&lt;String, Double&gt; resMap = getResult();
+    List&lt;Entry&lt;String, Double&gt;&gt; resList = new ArrayList&lt;&gt;(resMap.entrySet());
+    Collections.sort(resList, new Comparator&lt;Entry&lt;String, Double&gt;&gt;() {
+      @Override
+      public int compare(Entry&lt;String, Double&gt; o1, Entry&lt;String, Double&gt; o2) {
+        return o2.getValue().compareTo(o1.getValue());
+      }
+    });
+
+    //将计算结果保存成字符串形式
+    StringBuilder resStr = new StringBuilder();
+    resStr.append(&quot;proteinName\tscore\n&quot;);
+    for (Entry&lt;String, Double&gt; entry : resList) {
+      resStr.append(entry.getKey()+&quot;\t&quot;+entry.getValue()+&quot;\n&quot;);
+    }
+
+    Map&lt;String, String&gt; map = new HashMap&lt;&gt;();
+    map.put(&quot;output&quot;, resStr.toString());
+
+    return map;
+  }
+
+
+  /**
+   * 从输入流中读取字符串进行解析
+   * @param input
+   * @return
+   */
+  public String convertStreamToString(InputStream input){
+
+    BufferedReader br = new BufferedReader(new InputStreamReader(input));
+    StringBuilder sb = new StringBuilder();
+
+    String line = null;
+    try {
+      while ((line = br.readLine())!=null) {
+        sb.append(line+&quot;\n&quot;);
+      }
+    } catch (IOException e) {
+      e.printStackTrace();
+    }finally {
+      try {
+        input.close();
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+    }
+
+    return sb.toString();
+  }
+  public HashMap&lt;String, Double&gt; getResult(){
+
+    HashMap&lt;String, Double&gt; map = new HashMap&lt;&gt;();
+    for (int i = 0; i &lt; nodes.size(); i++) {
+      double result = 0;
+      //节点i的邻居节点
+      List&lt;Integer&gt; neighbors = new ArrayList&lt;&gt;();
+      for (int j = 0; j &lt; nodes.size(); j++) {
+        if (adjMatrix[i][j] != 0) {
+          neighbors.add(j);
+        }
+      }
+      if (neighbors.size()&gt;0) {
+        //由邻居节点构成的子图
+        int[][] subAdm = new int[neighbors.size()][neighbors.size()];
+        subgraph(subAdm, neighbors);
+        //求子图的最大连通分量
+        ConnectedCompent cc = new ConnectedCompent(subAdm);
+        result = (double) cc.getMaxCCVertex();
+      }
+      map.put(nodes.get(i), result);
+    }
+
+    return map;
+  }
+
+  /**
+   * 由邻居节点构成的网络的邻接矩阵
+   * @param subAdm
+   * @param neighbors
+   */
+  private void subgraph(int[][] subAdm, List&lt;Integer&gt; neighbors) {
+
+    for (int i = 0; i &lt; neighbors.size(); i++) {
+      for (int j = i+1; j &lt; neighbors.size(); j++) {
+        if (adjMatrix[neighbors.get(i)][neighbors.get(j)] != 0) {
+          subAdm[i][j] = 1;
+          subAdm[j][i] = 1;
+        }
+      }
+    }
+  }
+
+  /**
+   * 获取网络的邻接矩阵
+   * @return
+   */
+  private int[][] getAdjMatrix(){
+    int len = nodes.size();
+    int[][] adj = new int[len][len];
+
+    int m,n;
+    for (String[] edge:net) {
+      for (m = 0; m &lt; len; m++) {
+        if (nodes.get(m).equals(edge[0])) {
+          break;
+        }
+      }
+      for (n = 0; n &lt; len; n++) {
+        if (nodes.get(n).equals(edge[1])) {
+          break;
+        }
+      }
+      if (n&lt;len &amp;&amp; m &lt; len) {
+        adj[n][m] = 1;
+        adj[m][n] = 1;
+      }else {
+        System.out.println(&quot;array error!&quot;);
+      }
+    }
+    return adj;
+  }
+
+   /* 从网络中获取所有的蛋白质节点
+   * @return
+   */
+  private List&lt;String&gt; getAllNodes() {
+    List&lt;String&gt; list = new ArrayList&lt;&gt;();
+
+    for (String[] arr:net) {
+      if (!list.contains(arr[0])) {
+        list.add(arr[0]);
+      }
+      if (!list.contains(arr[1])) {
+        list.add(arr[1]);
+      }
+    }
+    System.out.println(&quot;node size:&quot;+list.size());
+    return list;
+  }
+  public class ConnectedCompent {
+    /**
+     * edge:二维数组，存储节点之间边的信息的列表
+     */
+    public int[][] edge;
+    /**
+     * visited:布尔数组，标记当前节点是否已经访问过
+     */
+    public boolean[] visited;
+    /**
+     * 当前进行深度优先遍历的连通图顶点集合
+     */
+    public List&lt;Integer&gt; cc;
+    /**
+     * 存放所有的连通分量
+     */
+    public Vector&lt;List&lt;Integer&gt;&gt; ccAll;
+    /**
+     * 最大连通分量索引位置
+     */
+    public int maxLoc;
+
+    public ConnectedCompent(int[][] edge) {
+      this.edge = edge;
+      con();
+    }
+
+    /**
+     * 求该图的连通分量
+     */
+    private void con() {
+      maxLoc = 0;
+      ccAll = new Vector&lt;&gt;();
+      visited = new boolean[edge.length];
+
+      for (int i = 0; i &lt; edge.length; i++) {
+        if (!visited[i]) {
+          cc = new ArrayList&lt;&gt;();
+          dfs(i);
+          ccAll.add(cc);
+          if (ccAll.get(maxLoc).size() &lt; cc.size()) {
+            maxLoc = ccAll.size()-1;
+          }
+        }
+      }
+    }
+
+    /**
+     * 获取连通分量的个数
+     */
+    public int getCCNum(){
+       return ccAll.size();
+    }
+
+    /**
+     * 图的深度优先递归算法
+     */
+    private void dfs(int i) {
+      visited[i] = true;
+      cc.add(i);
+      for (int j = 0; j &lt; edge.length; j++) {
+        if (visited[j] == false &amp;&amp; edge[i][j] == 1) {
+          dfs(j);
+        }
+      }
+    }
+
+    /**
+     * 最大连通分量的顶点数量
+     */
+    public int getMaxCCVertex(){
+
+      return ccAll.get(maxLoc).size();
+    }
+    /**
+     * 最大连通分量的边的数量
+     */
+    public int getMaxCCEdge(){
+
+      int num = 0;
+      List&lt;Integer&gt; maxCC = ccAll.get(maxLoc);
+      for (int i = 0; i &lt; maxCC.size(); i++) {
+        for (int j = i+1; j &lt; maxCC.size(); j++) {
+          if (edge[i][j] != 0) {
+            num = num + 1;
+          }
+        }
+      }
+
+      return num;
+    }
+  }
+
+}
+</code></pre></p>
+</li>
+<li>
+<p>Python</p>
+<p>要求：</p>
+<blockquote>
+<p>a. 每个模块只包含一个文件，而且文件类型必须是.py文件，建议用python3.x语法;<br />
+b. 需注意属性参数都是字符串类型；<br />
+c. 上下文输入对象如果是triplet型文件，需加属性参数标明要读的某几列的列数；<br />
+d. 每个模块都有一个/多个输出参数，指明结果写入文件的地址；<br />
+e. 结果存成dict类型，转成json格式之后，写入文件；</p>
+</blockquote>
+<p>demo:<br />
+<pre><code class="python">import json
+import sys
+
+def main():
+
+    # 从文件读输入数据
+    input1 = sys.argv[1]
+    inputcontent = ''
+    with open(input1, mode='r') as rf:
+        for line in rf:
+          inputcontent += line.strip() + '\n'
+
+    # ---算法--
+    # your algorithm
+    # ---------
+
+    # 输出
+    result = inputcontent
+    writefile = sys.argv[2]
+    with open(writefile, mode='w') as wf:
+        wf.write(result)
+
+    data = {
+      &quot;output&quot; : writefile,
+    }
+    json_data = json.dumps(data)
+    print(json_data)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre></p>
+</li>
+<li>
+<p>Matlab</p>
+<p>要求：</p>
+<blockquote>
+<p>a. 每个模块只包含一个文件，而且文件类型必须是.m文件;<br />
+b. 需注意属性参数都是字符串类型；<br />
+c. 每个模块都有一个/多个输出参数，指明结果写入文件的地址；<br />
+d. 结果存入文件；<br />
+e. 输出文件地址保存在dict类型中，用disp()打印出来；</p>
+</blockquote>
+<p>demo:<br />
+<pre><code class="matlab">function ksim = knn_sim(osim_filename, k, outputfile)
+    % 获取输入数据
+    sim = load(osim_filename);
+
+    % 算法
+    [nrow, ncol] = size(sim);
+    % diag(sim) = 0;
+    diagsim = sim(logical(eye(size(sim))));
+    sim(logical(eye(size(sim)))) = 0.0;
+    [B, IX] = sort(sim, 2, 'descend');
+    ksim = zeros(nrow, ncol);
+    k = str2num(k);
+    for i = 1:nrow
+        for j = 1:k
+            real_col = IX(i, j);
+            ksim(i, real_col) = sim(i, real_col);
+            ksim(real_col, i) = ksim(i, real_col);
+        end
+        for j = (k+1):ncol
+            if B(i, j) == B(i, k)
+                real_col = IX(i, j);
+                ksim(i, real_col) = sim(i, real_col);
+                ksim(real_col, i) = ksim(i, real_col);
+            else
+                break;
+            end
+        end
+    end
+    sim(logical(eye(size(sim)))) = diagsim;
+    ksim(logical(eye(size(ksim)))) = diagsim;
+
+    % 输出
+    dlmwrite(outputfile, ksim, '\t');
+    disp(['{output: &quot;', outputfile, '&quot;}']);
+end
+</code></pre></p>
+</li>
+<li>
+<p>R</p>
+<p>要求：</p>
+<blockquote>
+<p>a. <br />
+b. </p>
+</blockquote>
+<p>demo:<br />
+<pre><code class="R"># R code
+</code></pre></p>
+</li>
+<li></li>
+</ol>
+<h4 id="ii_1"><a name="user-content-ii_1" href="#ii_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>II. 模块文档规范</h4>
+<p>模块文档需包括以下10个部分：</p>
+<blockquote>
+<ol>
+<li>编号</li>
+<li>开发语言</li>
+<li>提交时间</li>
+<li>功能</li>
+<li>使用方法</li>
+<li>输入和参数说明</li>
+<li>输出结果格式</li>
+<li>参考文献/来源</li>
+<li>开发人员</li>
+<li>备注</li>
+</ol>
+</blockquote>
+<h3 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>三. 方法文档规范</h3>
+<p>一个方法对应一篇具体文章，一般由多个模块组成。</p>
+<p>一个方法的文档包括以下部分：</p>
+<blockquote>
+<ol>
+<li>类型</li>
+<li>描述</li>
+<li>输入</li>
+<li>输出</li>
+<li>模块，包括模块上下文参数，属性参数（给出具体的值），模块输出，模块先后顺序</li>
+<li>测试和评价， 包括文章用到的具体数据和具体的评价方法</li>
+<li>参考文献/来源：包括参考文献、网址等</li>
+<li>开发人员</li>
+</ol>
+</blockquote>
+<p>demo:</p>
+<blockquote>
+<p>NBI 方法<br />
+1.  类型：关系预测<br />
+2.  描述：NBI推荐值计算，该方法用来计算推荐值矩阵，通过二分图中两部资源传递的方法来计算推荐值矩阵。通过二分图的一个顶点集合中的任意两个顶点的共邻信息来预测二分图中的未知的边。假设二分图中的两组顶点集合为A和B。<br />
+3.  输入：A和B已知关联关系。<br />
+4.  输出：A和B的推荐值矩阵。<br />
+5.  模块：<br />
+a1：二分图邻接矩阵创建模块（15-33-10-001）<br />
+&nbsp;&nbsp;输入：A和B的二分图关联关系列表文件<br />
+&nbsp;&nbsp;输出：A和B的二分图邻接矩阵<br />
+b1：二分图顶点度计算模块（15-33-10-002）<br />
+&nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1）<br />
+&nbsp;&nbsp;输出：二分图邻接矩阵的行顶点度的向量<br />
+b2：二分图顶点度计算模块（15-33-10-002）<br />
+&nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1）<br />
+&nbsp;&nbsp;输出：二分图邻接矩阵的列顶点度的向量<br />
+c1：NBI推荐值计算模块（15-33-11-001）<br />
+&nbsp;&nbsp;输入：A和B的二分图邻接矩阵（来自a1），二分图邻接矩阵的列顶点度的向量（来自b2），二分图邻接矩阵的行顶点度的向量（来自b1）<br />
+&nbsp;&nbsp;输出：A和B的推荐值矩阵<br />
+6.  测试和评价<br />
+测试数据为mtis_list.txt, 评价方式为10-fold cross validation。<br />
+7.  参考文献/来源：Zhou,T. et al. (2007) Bipartite network projection and personal recommendation. Phys. Rev. E Stat. Nonlin. Soft Matter Phys., 76, 046115.</p>
+</blockquote>
+<h3 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>四. 问题描述文档规范</h3>
+<blockquote>
+<ol>
+<li>问题的描述</li>
+<li>问题需要用到的数据</li>
+<li>问题现有的方法</li>
+</ol>
+</blockquote></article></body></html>
