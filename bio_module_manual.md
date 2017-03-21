@@ -29,13 +29,17 @@
     (1). __matrix__
 
        ![network_matrix1](./network_matrix.png)
+
        &nbsp;
+       
        ![network_matrix2](./network_matrix2.png)
     
     (2). __triplet__
 
        ![network_triplet1](./network_triplet.png)
+       
        &nbsp;
+       
        ![network_triplet2](./network_triplet2.png)
 
 2. __其它__
@@ -61,8 +65,11 @@
     
     示例
     > (1)
+    
     > ![network_matrix2](./network_matrix2.png)
+    
     > (2)
+    
     > ![network_matrix31](./network_matrix3_1.png)     ![network_matrix32](./network_matrix3_2.png)
 
 #### IV. 数据描述规范
