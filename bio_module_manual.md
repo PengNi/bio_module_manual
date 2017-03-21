@@ -30,7 +30,6 @@
 
        ![network_matrix1](./network_matrix.png)
 
-       &nbsp;
        
        ![network_matrix2](./network_matrix2.png)
     
@@ -38,7 +37,6 @@
 
        ![network_triplet1](./network_triplet.png)
        
-       &nbsp;
        
        ![network_triplet2](./network_triplet2.png)
 
@@ -87,10 +85,15 @@
 
     要求：
     > a. 每个模块只包含一个文件，文件类型必须是.java文件且文件名与文件所包含类名必须保持一致；
+    > 
     > b. 模块中需包含execute方法（类似于main方法）；
+    > 
     > c. execute() 上下文输入对象类型是InputStream；
+    > 
     > d. execute() 的属性参数都是字符串类型，如需转换请在模块内转换成其它类型（如int）；
+    > 
     > e. 上下文输入对象如果是triplet型文件，需加属性参数标明要读的某几列的列数；
+    > 
     > f. execute() 输出对象类型是 Map<String, String> 类型，例子：<’output1’, ‘this is a string’>；
     
     demo：
@@ -383,9 +386,13 @@ public class MNC {
 
     要求：
     > a. 每个模块只包含一个文件，而且文件类型必须是.py文件，建议用python3.x语法;
+    > 
     > b. 需注意属性参数都是字符串类型；
+    > 
     > c. 上下文输入对象如果是triplet型文件，需加属性参数标明要读的某几列的列数；
+    > 
     > d. 每个模块都有一个/多个输出参数，指明结果写入文件的地址；
+    > 
     > e. 结果存成dict类型，转成json格式之后，写入文件；
     
     demo:
@@ -427,9 +434,13 @@ if __name__ == "__main__":
 
     要求：
     > a. 每个模块只包含一个文件，而且文件类型必须是.m文件;
+    > 
     > b. 需注意属性参数都是字符串类型；
+    > 
     > c. 每个模块都有一个/多个输出参数，指明结果写入文件的地址；
+    > 
     > d. 结果存入文件；
+    > 
     > e. 输出文件地址保存在dict类型中，用disp()打印出来；
     
     demo:
