@@ -483,12 +483,53 @@ end
 4. R
 
     要求：
-    > a. 
-    > b. 
+    > a. 每个模块只包含一个文件，而且文件类型必须是.R文件;
+    > 
+    > b. 需注意属性参数都是字符串类型；
+    > 
+    > c. 每个模块都有一个/多个输出参数，指明结果写入文件的地址；
+    > 
+    > d. 结果存入文件；
+    > 
+    > e. 输出文件地址保存在dict类型中，用print()打印出来；
     
     demo:
 ```R
-# R code
+# BOG.R----
+args = commandArgs(trailingOnly=TRUE)
+
+# --library the packages you need
+library(dSimer)
+library(jsonlite)
+
+# --read args if args num is enough
+if (length(args) < 4) {
+  print(length(args))
+  stop("4 arguments must be supplied (input file).n", call.=FALSE)
+} else {
+
+  # read args-------------------------------------
+  D1 <- unique(read.table(args[1], sep = "\t", quote = "", stringsAsFactors = FALSE,
+                      header = TRUE)[, 1])
+  D2 <- unique(read.table(args[2], sep = "\t", quote = "", stringsAsFactors = FALSE, header = TRUE)[, 1])
+  d2g <- read.table(args[3], sep = "\t", quote= "", stringsAsFactors = FALSE, header = TRUE)
+  # ----------------------------------------------
+  
+  # your algo-----------------------------
+  D1 <- sort(D1)
+  D2 <- sort(D2)
+  d2g <- x2y_df2list(d2g)
+  resmat <- BOG(D1, D2, d2g)
+
+  # write result------------------------------------
+  write.table(resmat, file = args[4], sep = "\t", quote = FALSE, row.names = FALSE, col.names = FALSE)
+  
+  # save the address of the file into dataframe-->json-->print
+  dispStrdf <- data.frame(matrix(ncol = 1,nrow = 1))
+  colnames(dispStrdf)<-c("output")
+  dispStrdf[1,1] = args[4]
+  print(toJSON(dispStrdf))
+}
 ```
 
 5. 

@@ -1501,11 +1501,48 @@ end
 <p>R</p>
 <p>要求：</p>
 <blockquote>
-<p>a. <br />
-b. </p>
+<p>a. 每个模块只包含一个文件，而且文件类型必须是.R文件;</p>
+<p>b. 需注意属性参数都是字符串类型；</p>
+<p>c. 每个模块都有一个/多个输出参数，指明结果写入文件的地址；</p>
+<p>d. 结果存入文件；</p>
+<p>e. 输出文件地址保存在dict类型中，用print()打印出来；</p>
 </blockquote>
 <p>demo:<br />
-<pre><code class="R"># R code
+<pre><code class="R"># BOG.R----
+args = commandArgs(trailingOnly=TRUE)
+
+# --library the packages you need
+library(dSimer)
+library(jsonlite)
+
+# --read args if args num is enough
+if (length(args) &lt; 4) {
+  print(length(args))
+  stop(&quot;4 arguments must be supplied (input file).n&quot;, call.=FALSE)
+} else {
+
+  # read args-------------------------------------
+  D1 &lt;- unique(read.table(args[1], sep = &quot;\t&quot;, quote = &quot;&quot;, stringsAsFactors = FALSE,
+                      header = TRUE)[, 1])
+  D2 &lt;- unique(read.table(args[2], sep = &quot;\t&quot;, quote = &quot;&quot;, stringsAsFactors = FALSE, header = TRUE)[, 1])
+  d2g &lt;- read.table(args[3], sep = &quot;\t&quot;, quote= &quot;&quot;, stringsAsFactors = FALSE, header = TRUE)
+  # ----------------------------------------------
+
+  # your algo-----------------------------
+  D1 &lt;- sort(D1)
+  D2 &lt;- sort(D2)
+  d2g &lt;- x2y_df2list(d2g)
+  resmat &lt;- BOG(D1, D2, d2g)
+
+  # write result------------------------------------
+  write.table(resmat, file = args[4], sep = &quot;\t&quot;, quote = FALSE, row.names = FALSE, col.names = FALSE)
+
+  # save the address of the file into dataframe--&gt;json--&gt;print
+  dispStrdf &lt;- data.frame(matrix(ncol = 1,nrow = 1))
+  colnames(dispStrdf)&lt;-c(&quot;output&quot;)
+  dispStrdf[1,1] = args[4]
+  print(toJSON(dispStrdf))
+}
 </code></pre></p>
 </li>
 <li></li>
